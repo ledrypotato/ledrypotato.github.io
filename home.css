@@ -27,7 +27,7 @@ body {
 	width: 30%;
 	font-size: 16px;
 	color:white;
-	border: 3px solid white;
+	/* border: 3px solid white; */
 }
 
 .useful-links{
@@ -35,7 +35,7 @@ body {
 	vertical-align: top;
 	color:white;
 	width:30%;
-	border: 3px solid white;
+	/* border: 3px solid white; */
 }
 
 .contact{
@@ -43,5 +43,5 @@ body {
 	vertical-align: top;
 	color:white;
 	width:30%;
-	border: 3px solid white;
+	/* border: 3px solid white; */
 }
