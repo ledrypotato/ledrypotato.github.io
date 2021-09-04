@@ -45,3 +45,33 @@ body {
 	width:30%;
 	/* border: 3px solid white; */
 }
+
+.projects{
+	display: inline-block;
+	margin-left: 50px;
+	/* vertical-align: top; */
+	color: white;
+	width: 80%;
+	/* border: 3px solid red; */
+}
+
+td{
+	/* border: 3px solid white; */
+	padding:20px;
+	vertical-align: top;
+}
+
+.project_table{
+	vertical-align: top;
+	/* border: 3px solid white; */
+}
+
+td:hover{
+	opacity: 80%;
+}
+
+.project_title{
+	text-align: center;
+	font-size: 30px;
+	color:white;
+}
