@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on ledrypotato</title>
+    <link>https://ledrypotato.github.io/tags/</link>
+    <description>Recent content in Tags on ledrypotato</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Mar 2025 14:00:27 +0100</lastBuildDate>
+    <atom:link href="https://ledrypotato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BloodHound</title>
+      <link>https://ledrypotato.github.io/tags/bloodhound/</link>
+      <pubDate>Sat, 22 Mar 2025 14:00:27 +0100</pubDate>
+      <guid>https://ledrypotato.github.io/tags/bloodhound/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BloodHound-CE</title>
+      <link>https://ledrypotato.github.io/tags/bloodhound-ce/</link>
+      <pubDate>Sat, 22 Mar 2025 14:00:27 +0100</pubDate>
+      <guid>https://ledrypotato.github.io/tags/bloodhound-ce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SharpHound</title>
+      <link>https://ledrypotato.github.io/tags/sharphound/</link>
+      <pubDate>Sat, 22 Mar 2025 14:00:27 +0100</pubDate>
+      <guid>https://ledrypotato.github.io/tags/sharphound/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
