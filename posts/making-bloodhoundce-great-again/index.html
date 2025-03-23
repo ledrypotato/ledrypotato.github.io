@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Making BloodHound CE Great Again // ledrypotato</title>
+    <title>Making BloodHound CE Great Again 🐶 // ledrypotato</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.143.1">
@@ -14,12 +14,12 @@
     
     
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Making BloodHound CE Great Again">
+  <meta name="twitter:title" content="Making BloodHound CE Great Again 🐶">
   <meta name="twitter:description" content="Import custom cypher queries into BloodHound Community Edition">
 
     <meta property="og:url" content="https://ledrypotato.github.io/posts/making-bloodhoundce-great-again/">
   <meta property="og:site_name" content="ledrypotato">
-  <meta property="og:title" content="Making BloodHound CE Great Again">
+  <meta property="og:title" content="Making BloodHound CE Great Again 🐶">
   <meta property="og:description" content="Import custom cypher queries into BloodHound Community Edition">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -62,7 +62,7 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Making BloodHound CE Great Again</h1>
+      <h1 class ="post-title">Making BloodHound CE Great Again 🐶</h1>
       <div class="post-meta">
         <div>
           <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -80,12 +80,39 @@
         </div>
       </div>
     </header>
+    
+    <div class="toc-container">
+      <h3>Table of Contents</h3>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">TLDR</a></li>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#but-wait">But wait&hellip;</a></li>
+      </ul>
+    </li>
+    <li><a href="#installing-bloodhound-ce-">Installing BloodHound CE 🐶</a>
+      <ul>
+        <li><a href="#avoiding-conflicts-with-burp-suite">Avoiding conflicts with Burp Suite</a></li>
+      </ul>
+    </li>
+    <li><a href="#importing-custom-queries-into-bloodhound-ce-">Importing Custom Queries into BloodHound CE ⚡</a>
+      <ul>
+        <li><a href="#finding-custom-queries">Finding Custom Queries</a></li>
+        <li><a href="#fetching-the-api-jwt">Fetching the API JWT</a></li>
+        <li><a href="#python-script">Python Script</a></li>
+      </ul>
+    </li>
+    <li><a href="#ingestors---use-sharphound">Ingestors - Use SharpHound!</a></li>
+  </ul>
+</nav>
+    </div>
     <div class="post-content">
       <hr>
-<h1 id="tldr">TLDR</h1>
+<h2 id="tldr">TLDR</h2>
 <p>How to <strong>import custom cypher queries into BloodHound Community Edition</strong> (BHCE) to make it great again and what ingestor to use to make the most out of your enumeration.</p>
 <hr>
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction">Introduction</h2>
 <p>If you&rsquo;re an avid BloodHound user like myself, you&rsquo;ve most likely heard about the new <a href="https://specterops.io/bloodhound-community-edition/">BloodHound CE</a> (Community Edition) that released in August 2023. This new release got my excited to try it out 😁!</p>
 <h3 id="but-wait">But wait&hellip;</h3>
 <p>The reason I wanted to try out the new release was to test out the new features that were implemented. Only to realize that they are missing the most crucial part of a Pentester&rsquo;s arsenal, <em>⭐ Custom Queries ⭐</em>.</p>
@@ -94,7 +121,7 @@
 <p><img src="images/old_vs_new_meme.png" alt=""></p>
 <p>But fear not! The next sections will demonstrate how to import your favourite custom queries that you&rsquo;re used to using in a new and fresh UI experience.</p>
 <hr>
-<h1 id="installing-bloodhound-ce-">Installing BloodHound CE 🐶</h1>
+<h2 id="installing-bloodhound-ce-">Installing BloodHound CE 🐶</h2>
 <p>My favourite way of installing BloodHound CE is with Docker, you can find the <code>docker-compose.yml</code> file on the official SpecterOps <a href="https://github.com/SpecterOps/BloodHound/tree/main">GitHub</a> repository.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://github.com/SpecterOps/BloodHound/blob/main/examples/docker-compose/docker-compose.yml
 </span></span></code></pre></div><p>After downloading it to our machine there are a few configuration changes I like to do before running it.</p>
@@ -120,7 +147,7 @@
 <p><img src="images/login_portal.png" alt=""></p>
 <p>The default username is <code>admin</code> and the password is <code>bloodhoundcommunityedition</code>, you will be prompted to change your password on the first login.</p>
 <hr>
-<h1 id="importing-custom-queries-into-bloodhound-ce-">Importing Custom Queries into BloodHound CE ⚡</h1>
+<h2 id="importing-custom-queries-into-bloodhound-ce-">Importing Custom Queries into BloodHound CE ⚡</h2>
 <p>The custom queries used in classic BloodHound are not compatible with BloodHound CE, you have to convert them to another format before importing them. The script I use below does that for you.</p>
 <p>Here are the 2 main resources that I used to go through this process, if you want more information on the differences in the format you can check out the first link.</p>
 <ul>
@@ -172,7 +199,7 @@
 <p>You should see all the ones you have imported in the &ldquo;Custom Searches&rdquo; tab 🎉!</p>
 <p><img src="images/custom_queries_uploaded.png" alt=""></p>
 <hr>
-<h1 id="ingestors---use-sharphound">Ingestors - Use SharpHound!</h1>
+<h2 id="ingestors---use-sharphound">Ingestors - Use SharpHound!</h2>
 <p>I highly recommend using the official BloodHound collectors that are available at <code>/ui/download-collectors</code> on your instance or simply click on the &ldquo;Download Collectors&rdquo; button in the cog wheel.</p>
 <p><img src="images/collectors.png" alt=""></p>
 <p>I have had several cases where not all the edges show up in BloodHound (typically <code>canRDP</code> or <code>hasSession</code>) when using Python collectors such as <code>bloodhound-ce.py</code> available in <a href="https://exegol.readthedocs.io/en/latest/">Exegol</a> which I believe is from <a href="https://github.com/dirkjanm/BloodHound.py/tree/bloodhound-ce">dirkjanm&rsquo;s bloodhound-ce branch</a>.</p>

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50275&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>From SSTI to SYSTEM - A WinDev Adventure ⛷️ // ledrypotato</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="TLDR This is the story of how I recently (2024) exploited a SSRF vulnerability in a web application that led to complete machine compromise.
 Introduction After figuring out that the web application that I was auditing was using WinDev I thought I would search around for some known exploits/pentest notes on this subject. The only interesting article I found at the time was this blog post by dsecbypass. This article aims to share what I learnt and what to look out for next time you pentest a WinDev application.">
 
-    <meta property="og:url" content="http://localhost:50275/posts/from-ssti-to-system-a-windev-adventure/">
+    <meta property="og:url" content="http://localhost:1313/posts/from-ssti-to-system-a-windev-adventure/">
   <meta property="og:site_name" content="ledrypotato">
   <meta property="og:title" content="From SSTI to SYSTEM - A WinDev Adventure ⛷️">
   <meta property="og:description" content="TLDR This is the story of how I recently (2024) exploited a SSRF vulnerability in a web application that led to complete machine compromise.
@@ -88,6 +88,11 @@ Introduction After figuring out that the web application that I was auditing was
         </div>
       </div>
     </header>
+    
+    <div class="toc-container">
+      <h3>Table of Contents</h3>
+      <nav id="TableOfContents"></nav>
+    </div>
     <div class="post-content">
       <h1 id="tldr">TLDR</h1>
 <p>This is the story of how I recently (2024) exploited a SSRF vulnerability in a web application that led to complete machine compromise.</p>
