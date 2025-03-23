@@ -174,7 +174,7 @@ But wait… The reason I wanted to try out the new release was to test out the n
 <hr>
 <h1 id="ingestors---use-sharphound">Ingestors - Use SharpHound!</h1>
 <p>I highly recommend using the official BloodHound collectors that are available at <code>/ui/download-collectors</code> on your instance or simply click on the &ldquo;Download Collectors&rdquo; button in the cog wheel.</p>
-<p><img src="images/Pasted%20image%2020250323103658.png" alt=""></p>
+<p><img src="images/collectors.png" alt=""></p>
 <p>I have had several cases where not all the edges show up in BloodHound (typically <code>canRDP</code> or <code>hasSession</code>) when using Python collectors such as <code>bloodhound-ce.py</code> available in <a href="https://exegol.readthedocs.io/en/latest/">Exegol</a> which I believe is from <a href="https://github.com/dirkjanm/BloodHound.py/tree/bloodhound-ce">dirkjanm&rsquo;s bloodhound-ce branch</a>.</p>
 <p>If you have access to the target machine you can try running SharpHound directly on it. However if you don&rsquo;t have access to a machine you can run it from a local Windows VM. This is a good alternative if you are getting blocked by AV on the target.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>runas /user:DOMAIN<span style="color:#ae81ff">\U</span>SERNAME /netonly cmd.exe
