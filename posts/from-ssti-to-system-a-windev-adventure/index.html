@@ -4,11 +4,11 @@
     <title>From SSTI to SYSTEM - A WinDev Adventure ⛷️ // ledrypotato</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.143.1">
+    <meta name="generator" content="Hugo 0.147.9">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="ledrypotato" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    <link rel="stylesheet" href="/css/main.min.50f7b56d011cc3efdb9a5145fbfa6cabb3c4e6e5a3d2c34b0a6432d881feafa6.css" />
     
 
     
@@ -75,7 +75,9 @@ Introduction After figuring out that the web application that I was auditing was
         </div>
         <div>
           <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          1 min read
+          
+            1 min read
+          
         </div>
         <div>
           <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
@@ -89,12 +91,13 @@ Introduction After figuring out that the web application that I was auditing was
       </div>
     </header>
     
-    <div class="toc-container">
-      <h3>Table of Contents</h3>
-      <nav id="TableOfContents"></nav>
-    </div>
-    <div class="post-content">
-      <h1 id="tldr">TLDR</h1>
+    
+     <div class="toc-container">
+          <h3>Table of Contents</h3>
+          <nav id="TableOfContents"></nav>
+      </div>
+      <div class="post-content">
+        <h1 id="tldr">TLDR</h1>
 <p>This is the story of how I recently (2024) exploited a SSRF vulnerability in a web application that led to complete machine compromise.</p>
 <h1 id="introduction">Introduction</h1>
 <p>After figuring out that the web application that I was auditing was using <a href="https://fr.wikipedia.org/wiki/WinDev">WinDev</a> I thought I would search around for some known exploits/pentest notes on this subject. The only interesting article I found at the time was this <a href="https://www.dsecbypass.com/en/webdev-websites-pentest/">blog post</a> by dsecbypass. This article aims to share what I learnt and what to look out for next time you pentest a WinDev application.</p>
@@ -106,7 +109,8 @@ Introduction After figuring out that the web application that I was auditing was
 </span></span></code></pre></div><p>This immediately ticked in my head and I started to play around with SSTI payloads.</p>
 <p>My first thought was to identify what templating language was getting used in the background. To do so I followed <a href="https://portswigger.net/web-security/server-side-template-injection#identify">this flowchart</a>.</p>
 
-    </div>
+      </div>
+    
     <div class="post-footer">
       
     </div>

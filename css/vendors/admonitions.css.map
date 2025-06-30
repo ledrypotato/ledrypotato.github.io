@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "admonitions.css",
-	"sourceRoot": "F:/Blog/blog/ledrypotato",
+	"sourceRoot": "D:/Blog/blog/ledrypotato",
 	"sources": [
 		"themes/hugo-admonitions/assets/sass/vendors/_admonitions.scss"
 	],

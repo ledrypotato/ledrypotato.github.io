@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BloodHound on ledrypotato</title>
-    <link>https://ledrypotato.github.io/tags/bloodhound/</link>
+    <link>http://localhost:1313/tags/bloodhound/</link>
     <description>Recent content in BloodHound on ledrypotato</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ledrypotato.github.io/tags/bloodhound/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bloodhound/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Le Hack 2025 - NetExec Workshop 🕷️</title>
+      <link>http://localhost:1313/posts/le-hack-2025---netexec-workshop/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/le-hack-2025---netexec-workshop/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;&#xA;&lt;p&gt;Every year &lt;a href=&#34;https://lehack.org/fr/&#34;&gt;Le Hack&lt;/a&gt; takes place in Paris. This cybersecurity event offers talks and workshops in loads of different fields.&lt;/p&gt;&#xA;&lt;p&gt;This year again &lt;a href=&#34;https://x.com/mpgn_x64&#34;&gt;@mpgn_x64&lt;/a&gt; (Martial Puygrenier), &lt;a href=&#34;https://x.com/wil_fri3d&#34;&gt;@wil_fri3d&lt;/a&gt; (Wilfried BÉCARD) and &lt;a href=&#34;https://x.com/_zblurx&#34;&gt;@_zblurx&lt;/a&gt; (Thomas Seigneuret) organized a &lt;a href=&#34;https://github.com/Pennyw0rth/NetExec&#34;&gt;NetExec&lt;/a&gt; workshop. I was lucky enough to attend it last year as well but only managed to compromise 1 of the 2 Active Directory domains 😔&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;This year my objective was to compromise both domains 😁!&lt;/p&gt;&#xA;&lt;p&gt;The goal of this workshop is to use exclusively NetExec to compromise 2 Active Directory domains, this year&amp;rsquo;s theme is Star Wars 🚀💫!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Making BloodHound CE Great Again 🐶</title>
-      <link>https://ledrypotato.github.io/posts/making-bloodhoundce-great-again/</link>
+      <link>http://localhost:1313/posts/making-bloodhoundce-great-again/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://ledrypotato.github.io/posts/making-bloodhoundce-great-again/</guid>
+      <guid>http://localhost:1313/posts/making-bloodhoundce-great-again/</guid>
       <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;&#xA;&lt;p&gt;How to &lt;strong&gt;import custom cypher queries into BloodHound Community Edition&lt;/strong&gt; (BHCE) to make it great again and what ingestor to use to make the most out of your enumeration.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re an avid BloodHound user like myself, you&amp;rsquo;ve most likely heard about the new &lt;a href=&#34;https://specterops.io/bloodhound-community-edition/&#34;&gt;BloodHound CE&lt;/a&gt; (Community Edition) that released in August 2023. This new release got my excited to try it out 😁!&lt;/p&gt;&#xA;&lt;h3 id=&#34;but-wait&#34;&gt;But wait&amp;hellip;&lt;/h3&gt;&#xA;&lt;p&gt;The reason I wanted to try out the new release was to test out the new features that were implemented. Only to realize that they are missing the most crucial part of a Pentester&amp;rsquo;s arsenal, &lt;em&gt;⭐ Custom Queries ⭐&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

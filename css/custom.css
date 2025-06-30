@@ -1,5 +1,5 @@
 .toc-container {
-    position: fixed;
+    position:static;
     top: 100px;
     right: 20px;
     width: 250px;
