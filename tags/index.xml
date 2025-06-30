@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ledrypotato</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://ledrypotato.github.io/tags/</link>
     <description>Recent content in Tags on ledrypotato</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ledrypotato.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AS-REP Roasting</title>
-      <link>http://localhost:1313/tags/as-rep-roasting/</link>
+      <link>https://ledrypotato.github.io/tags/as-rep-roasting/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/as-rep-roasting/</guid>
+      <guid>https://ledrypotato.github.io/tags/as-rep-roasting/</guid>
       <description></description>
     </item>
     <item>
       <title>BackupOperator</title>
-      <link>http://localhost:1313/tags/backupoperator/</link>
+      <link>https://ledrypotato.github.io/tags/backupoperator/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/backupoperator/</guid>
+      <guid>https://ledrypotato.github.io/tags/backupoperator/</guid>
       <description></description>
     </item>
     <item>
       <title>BloodHound</title>
-      <link>http://localhost:1313/tags/bloodhound/</link>
+      <link>https://ledrypotato.github.io/tags/bloodhound/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bloodhound/</guid>
+      <guid>https://ledrypotato.github.io/tags/bloodhound/</guid>
       <description></description>
     </item>
     <item>
       <title>GMSA</title>
-      <link>http://localhost:1313/tags/gmsa/</link>
+      <link>https://ledrypotato.github.io/tags/gmsa/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gmsa/</guid>
+      <guid>https://ledrypotato.github.io/tags/gmsa/</guid>
       <description></description>
     </item>
     <item>
       <title>Kerberoasting</title>
-      <link>http://localhost:1313/tags/kerberoasting/</link>
+      <link>https://ledrypotato.github.io/tags/kerberoasting/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/kerberoasting/</guid>
+      <guid>https://ledrypotato.github.io/tags/kerberoasting/</guid>
       <description></description>
     </item>
     <item>
       <title>LeHack</title>
-      <link>http://localhost:1313/tags/lehack/</link>
+      <link>https://ledrypotato.github.io/tags/lehack/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/lehack/</guid>
+      <guid>https://ledrypotato.github.io/tags/lehack/</guid>
       <description></description>
     </item>
     <item>
       <title>MSSQL</title>
-      <link>http://localhost:1313/tags/mssql/</link>
+      <link>https://ledrypotato.github.io/tags/mssql/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/mssql/</guid>
+      <guid>https://ledrypotato.github.io/tags/mssql/</guid>
       <description></description>
     </item>
     <item>
       <title>NetExec</title>
-      <link>http://localhost:1313/tags/netexec/</link>
+      <link>https://ledrypotato.github.io/tags/netexec/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/netexec/</guid>
+      <guid>https://ledrypotato.github.io/tags/netexec/</guid>
       <description></description>
     </item>
     <item>
       <title>Notepad&#43;&#43;</title>
-      <link>http://localhost:1313/tags/notepad&#43;&#43;/</link>
+      <link>https://ledrypotato.github.io/tags/notepad&#43;&#43;/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/notepad&#43;&#43;/</guid>
+      <guid>https://ledrypotato.github.io/tags/notepad&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Pre2k</title>
-      <link>http://localhost:1313/tags/pre2k/</link>
+      <link>https://ledrypotato.github.io/tags/pre2k/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pre2k/</guid>
+      <guid>https://ledrypotato.github.io/tags/pre2k/</guid>
       <description></description>
     </item>
     <item>
       <title>Secretsdump</title>
-      <link>http://localhost:1313/tags/secretsdump/</link>
+      <link>https://ledrypotato.github.io/tags/secretsdump/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/secretsdump/</guid>
+      <guid>https://ledrypotato.github.io/tags/secretsdump/</guid>
       <description></description>
     </item>
     <item>
       <title>BloodHound-CE</title>
-      <link>http://localhost:1313/tags/bloodhound-ce/</link>
+      <link>https://ledrypotato.github.io/tags/bloodhound-ce/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bloodhound-ce/</guid>
+      <guid>https://ledrypotato.github.io/tags/bloodhound-ce/</guid>
       <description></description>
     </item>
     <item>
       <title>SharpHound</title>
-      <link>http://localhost:1313/tags/sharphound/</link>
+      <link>https://ledrypotato.github.io/tags/sharphound/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sharphound/</guid>
+      <guid>https://ledrypotato.github.io/tags/sharphound/</guid>
       <description></description>
     </item>
   </channel>
